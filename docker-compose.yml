@@ -1,0 +1,37 @@
+services:
+  mailserver:
+    image: docker.io/mailserver/docker-mailserver:latest
+    container_name: mailserver
+    hostname: mail.helps4u.com
+    ports:
+      - "25:25"
+      - "587:587"
+      - "993:993"
+      - "143:143"
+      - "110:110"
+      - "465:465"
+      - "995:995"
+    volumes:
+      - ./config:/tmp/docker-mailserver
+      - ./data:/var/mail
+    environment:
+      - DMS_DEBUG=${DMS_DEBUG}
+      - ENABLE_SPAMASSASSIN=${ENABLE_SPAMASSASSIN}
+      - ENABLE_CLAMAV=${ENABLE_CLAMAV}
+      - ENABLE_FAIL2BAN=${ENABLE_FAIL2BAN}
+      - ENABLE_FETCHMAIL=${ENABLE_FETCHMAIL}
+      - ENABLE_LDAP=${ENABLE_LDAP}
+      - ENABLE_SASLAUTHD=${ENABLE_SASLAUTHD}
+      - ENABLE_POSTGREY=${ENABLE_POSTGREY}
+      - ENABLE_DKIMGEN=${ENABLE_DKIMGEN}
+      - ENABLE_DKIM_VERIFY=${ENABLE_DKIM_VERIFY}
+      - ENABLE_MTA_STS=${ENABLE_MTA_STS}
+      - ENABLE_SRS=${ENABLE_SRS}
+      - ENABLE_POP3=${ENABLE_POP3}
+      - ENABLE_IMAP=${ENABLE_IMAP}
+      - SSL_TYPE=${SSL_TYPE}
+      - DOMAIN=${DOMAINS}
+      - TZ=${TZ}
+    cap_add:
+      - NET_ADMIN
+    restart: always

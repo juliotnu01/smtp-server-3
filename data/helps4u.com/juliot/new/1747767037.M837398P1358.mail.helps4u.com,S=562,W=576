@@ -1,0 +1,14 @@
+Return-Path: <root@mail.helps4u.com>
+Delivered-To: juliot@helps4u.com
+Received: from mail.helps4u.com
+	by mail.helps4u.com with LMTP
+	id JhUbMf3OLGhOBQAAmtRgUg
+	(envelope-from <root@mail.helps4u.com>)
+	for <juliot@helps4u.com>; Tue, 20 May 2025 13:50:37 -0500
+Received: by mail.helps4u.com (Postfix, from userid 0)
+	id BE5F82204BA; Tue, 20 May 2025 13:50:37 -0500 (-05)
+Message-Id: <20250520185037.BE5F82204BA@mail.helps4u.com>
+Date: Tue, 20 May 2025 13:50:37 -0500 (-05)
+From: root <root@mail.helps4u.com>
+
+Este es un correo de prueba desde mi servidor Docker.
