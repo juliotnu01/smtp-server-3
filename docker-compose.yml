@@ -4,7 +4,7 @@ services:
     container_name: mailserver
     hostname: mail.helps4u.com
     ports:
-      - "25:25"
+      # - "25:25"
       - "587:587"
       - "993:993"
       - "143:143"
