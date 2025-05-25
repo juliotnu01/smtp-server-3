@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic
+Jinja2
+# python-multipart is also often useful with FastAPI for form data,
+# but not strictly required for this JSON-based email API.
+# Consider adding if you plan to support file attachments directly via form uploads.
+# python-multipart
